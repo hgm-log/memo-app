@@ -49,3 +49,21 @@ MySQL（データの保管庫）
 
 -  `@RequestBody Memo memo`
   JSONをMemo型で受け取る部分
+
+## Spring Data JPAとDockerの役割
+
+### 分からなかったこと
+
+- Spring Data JPAは何をするものか
+- Dockerとの関係は何か
+
+### 現在の理解
+
+- Spring Data JPAは、JavaからDBを操作しやすくするために用意された便利な仕組み
+  - `findAll()`でDBからすべてのデータを取得できる
+  - `save()`でDBへデータを保存できる
+- MySQLは、データを管理するソフトウェア（中身）
+- Dockerは、MySQLを入れる専用の箱（コンテナ）を作り、起動・停止・削除などの管理をする仕組み（管理装置・起動装置）
+- Spring Data JPAとDockerは直接つながるものではなく、それぞれ別の役割でMySQLに関係している
+ 　- Spring Data JPAは、JavaからMySQLのデータを操作する
+　 - Dockerは、MySQLが動くコンテナを用意して管理する
