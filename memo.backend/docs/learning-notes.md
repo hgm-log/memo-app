@@ -65,5 +65,5 @@ MySQL（データの保管庫）
 - MySQLは、データを管理するソフトウェア（中身）
 - Dockerは、MySQLを入れる専用の箱（コンテナ）を作り、起動・停止・削除などの管理をする仕組み（管理装置・起動装置）
 - Spring Data JPAとDockerは直接つながるものではなく、それぞれ別の役割でMySQLに関係している
- 　- Spring Data JPAは、JavaからMySQLのデータを操作する
-　 - Dockerは、MySQLが動くコンテナを用意して管理する
+    - Spring Data JPAは、JavaからMySQLのデータを操作する
+    - Dockerは、MySQLが動くコンテナを用意して管理する
