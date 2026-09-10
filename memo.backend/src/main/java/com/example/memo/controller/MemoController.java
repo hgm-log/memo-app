@@ -2,6 +2,7 @@ package com.example.memo.controller;
 
 import com.example.memo.entity.Memo;
 import com.example.memo.repository.MemoRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 
@@ -29,6 +30,7 @@ public class MemoController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Memo createMemo(@Valid @RequestBody Memo memo) {
     return memoRepository.save(memo);
     }
