@@ -3,6 +3,7 @@ package com.example.memo.controller;
 import com.example.memo.entity.Memo;
 import com.example.memo.repository.MemoRepository;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class MemoController {
     }
 
     @PostMapping
-    public Memo createMemo(@RequestBody Memo memo) {
-        return memoRepository.save(memo);
+    public Memo createMemo(@Valid @RequestBody Memo memo) {
+    return memoRepository.save(memo);
     }
 }
